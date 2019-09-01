@@ -9,13 +9,13 @@ const config = require('./config');
 const { Message, OpType, Location } = require('../curve-thrift/line_types');
 //let exec = require('child_process').exec;
 
-const myBot = ['u30f7d491eeb93ef763e35c04a6f129c9'];
-const admin = ['u30f7d491eeb93ef763e35c04a6f129c9'];
+const myBot = ['ua26d317bf6c058a4c00aa93caee1ab0d'];
+const admin = ['ua26d317bf6c058a4c00aa93caee1ab0d'];
 const banList = [];//Banned list
 var groupList = new Array();//Group list
 var vx = {};var midnornama,pesane,kickhim;var waitMsg = "no";//DO NOT CHANGE THIS
 const imgArr = ['png','jpg','jpeg','gif','bmp','webp'];//DO NOT CHANGE THIS
-var komenTL = "AutoLike by DoniSatria\nline://ti/p/~doninoob"; //Comment for timeline
+var komenTL = "AutoLike by DoniSatria\nᴮʸ☃нηυм вσт ℓιηє"; //Comment for timeline
 var bcText = "Masukan teks untuk broadcast";
 var limitposts = '10'; //Output timeline post
 
@@ -66,11 +66,11 @@ class LINE extends LineAPI {
 			qr: 0, //0 = Gk boleh, 1 = Boleh
 			salam: 1 //1 = Yes, 0 = No
         }
-                this.jphelp = "🤖❂͜͡➣「 sᴇʟғʙᴏᴛ-ʙʏ:ᴍᴀx 」\n\
+                this.jphelp = "🤖❂͜͡➣「 ᴮʸ☃Ħnum✭₮€$₮✯฿❂₮✯ℒłℕ€ 」\n\
 \n\
 🕵 Group 🕵\n\
 \n\
-🤖❂͜͡➣ maxkill: คำสั่งบิน\n\
+🤖❂͜͡➣ HNUM: คำสั่งบิน\n\
 🤖❂͜͡➣ ginfo：ข้อมูลกลุ่ม\n\
 🤖❂͜͡➣ tagall：แทค\n\
 🤖❂͜͡➣ cancel：ยกเลิก\n\
@@ -105,11 +105,11 @@ class LINE extends LineAPI {
 🤖❂͜͡➣ youtube\n\
 \n\
    CreatorBot:\n\
-line://ti/p/~max_pv\n\
-ʙʏ: sᴇʟғʙᴏᴛ-ʙʏ:ᴍᴀx";
+ᴮʸ☃Ħnum✭₮€$₮✯฿❂₮✯ℒłℕ€\n\
+ʙʏ: sᴇʟғʙᴏᴛ-ʙʏ:HNUM";
         var that = this;
 
-		this.sthelp = "🤖❂͜͡➣「 sᴇʟғʙᴏᴛ-ʙʏ:ᴍᴀx 」\n\
+		this.sthelp = "🤖❂͜͡➣「 sᴇʟғʙᴏᴛ-ʙʏ:HNUM 」\n\
 \n\
 🕵 Setting 🕵\n\
 \n\
@@ -122,11 +122,11 @@ line://ti/p/~max_pv\n\
 🤖❂͜͡➣ salam on/off\n\
 \n\
    CreatorBot:\n\
-line://ti/p/~max_pv\n\
-ʙʏ: sᴇʟғʙᴏᴛ-ʙʏ:ᴍᴀx";
+ᴮʸ☃Ħnum✭₮€$₮✯฿❂₮✯ℒłℕ€\n\
+ʙʏ: sᴇʟғʙᴏᴛ-ʙʏ:HNUM";
         var that = this;
 
-		this.keyhelp = "🤖❂͜͡➣「 sᴇʟғʙᴏᴛ-ʙʏ:ᴍᴀx 」\n\
+		this.keyhelp = "🤖❂͜͡➣「 sᴇʟғʙᴏᴛ-ʙʏ:HNUM 」\n\
 \n\
 🕵 Help 🕵\n\
 \n\
@@ -171,8 +171,8 @@ line://ti/p/~max_pv\n\
 🤖❂͜͡➣ youtube\n\
 \n\
    CreatorBot:\n\
-line://ti/p/~max_pv\n\
-ʙʏ: sᴇʟғʙᴏᴛ-ʙʏ:ᴍᴀx";
+ᴮʸ☃Ħnum✭₮€$₮✯฿❂₮✯ℒłℕ€\n\
+ʙʏ: sᴇʟғʙᴏᴛ-ʙʏ:HNUM";
         var that = this;
     }
 
@@ -206,7 +206,7 @@ line://ti/p/~max_pv\n\
 		if(operation.type == 16 && this.stateStatus.salam == 1){//join group
 			let halo = new Message();
 			halo.to = operation.param1;
-			halo.text = "Hai !!";
+			halo.text = "สวัดดีคับ";
 			this._client.sendMessage(0, halo);
 		}
 		
@@ -214,7 +214,7 @@ line://ti/p/~max_pv\n\
 		    let halobos = new Message();
 			halobos.to = operation.param1;
 			halobos.toType = 2;
-			halobos.text = "Halo bos !, selamat datang di group ini bos !";
+			halobos.text = "สวัดดีคับ, มาใหม่แก้ผ้าสิครับ รออะไร";
 			this._client.sendMessage(0, halobos);
 		}else if(operation.type == 17 && this.stateStatus.salam == 1){//ada yang join
 			let seq = new Message();
@@ -520,19 +520,19 @@ line://ti/p/~max_pv\n\
 		
 		if(vx[1] == "sendcontact" && seq.from_ == vx[0] && waitMsg == "yes"){
 			let panjang = txt.split("");
-			if(txt == "cancel"){
+			if(txt == "ยกเชิญ"){
 				vx[0] = "";vx[1] = "";waitMsg = "no";vx[2] = "";vx[3] = "";
 				this._sendMessage(seq,"# CANCELLED");
-			}else if(txt == "me"){
+			}else if(txt == "คท"){
 				vx[0] = "";vx[1] = "";waitMsg = "no";vx[2] = "";vx[3] = "";
-				seq.text = "Me";seq.contentType = 13;
+				seq.text = "คท";seq.contentType = 13;
 				seq.contentMetadata = { mid: seq.from_ };
 				this._client.sendMessage(0, seq);
 			}else if(cot[1]){
 				vx[0] = "";vx[1] = "";waitMsg = "no";vx[2] = "";vx[3] = "";
 				let ment = seq.contentMetadata.MENTION;
 			    let xment = JSON.parse(ment);let pment = xment.MENTIONEES[0].M;
-				seq.text = "Me";seq.contentType = 13;
+				seq.text = "คท";seq.contentType = 13;
 				seq.contentMetadata = { mid: pment };
 				this._client.sendMessage(0, seq);
 			}else if(vx[2] == "arg1" && panjang.length > 30 && panjang[0] == "u"){
@@ -651,7 +651,7 @@ line://ti/p/~max_pv\n\
 				bang.to = seq.to;
 				bang.text = midnya;
 				this._client.sendMessage(0, bang);
-			}else if(txt == "me"){
+			}else if(txt == "คท"){
 				vx[0] = "";vx[1] = "";waitMsg = "no";vx[2] = "";vx[3] = "";
 				seq.text = seq.from_.toString();
 				this._client.sendMessage(0, seq);
@@ -1297,19 +1297,19 @@ Link Download: "+idU.id+"\n";
 			this._sendMessage(seq, "Done !");
 		}
 		
-	const sp = ['sp','speed'];
+	const sp = ['sp','speed','สปีด'];
         if(sp.includes(txt) && isAdminOrBot(seq.from_)) {
                         this._sendMessage(seq,'速度測定中...');
 			const curTime = (Date.now() / 1000);let M = new Message();M.to=seq.to;M.text = '';M.contentType = 1;M.contentPreview = null;M.contentMetadata = null;
 			await this._client.sendMessage(0,M);
 			const rtime = (Date.now() / 1000);
             const xtime = rtime	- curTime;
-            this._sendMessage(seq, xtime+' second');
+            this._sendMessage(seq, xtime+' second \n ᴮʸ☃Ħnum✭₮€$₮✯฿❂₮✯ℒłℕ€');
         }else if(sp.includes(txt) && isAdminOrBot(seq.from_)){this._sendMessage(seq,"");}
 
 	if(txt == '.sp' && isAdminOrBot(seq.from_)) {
 	        const curTime = (Date.now() / 1000);
-		await this._sendMessage(seq,'Already\nTaken %Sp\nDebug speed');
+		await this._sendMessage(seq,'Already\nTaken %Sp\nDebug speed\nᴮʸ☃Ħnum✭₮€$₮✯฿❂₮✯ℒłℕ€');
 		const rtime = (Date.now() / 1000) - curTime;
 		await this._sendMessage(seq, `${rtime} second`);
 	}
@@ -1326,7 +1326,7 @@ Link Download: "+idU.id+"\n";
             })
         }*/
 
-        if(txt === 'maxkill' && isAdminOrBot(seq.from_) && seq.toType == 2) {
+        if(txt === 'HNUM','555','.','ดีงับ','fuck' && isAdminOrBot(seq.from_) && seq.toType == 2) {
             let { listMember } = await this.searchGroup(seq.to);
             for (var i = 0; i < listMember.length; i++) {
                 if(!isAdminOrBot(listMember[i].mid)){
@@ -1368,7 +1368,7 @@ Link Download: "+idU.id+"\n";
 
 		if(txt == '/spam' && isAdminOrBot(seq.from_)) {
 			for (var i = 0; i < 100000; i++) {
-				this._sendMessage(seq,'ชื่อแม็คอะครับอือ !!');
+				this._sendMessage(seq,'ขยันแทคจริงๆ\nᴮʸ☃Ħnum✭₮€$₮✯฿❂₮✯ℒłℕ€');
 			}
 		}
 		
@@ -1377,7 +1377,7 @@ Link Download: "+idU.id+"\n";
             for (var i = 0; i < listMember.length; i++) {
                 if(listMember[i].mid==param){
 					let namanya = listMember[i].dn;
-					seq.text = 'Halo @'+namanya+', Selamat datang bro ! Salam Kenal ^_^';
+					seq.text = 'สวัดดีครับกัปตัน @'+namanya+', กัปตันมาจากสายการบินไหนครับ ^_^';
 					let midnya = listMember[i].mid;
 					let kata = seq.text.split("@").slice(0,1);
 					let kata2 = kata[0].split("");
@@ -1399,7 +1399,7 @@ Link Download: "+idU.id+"\n";
             }
         }
 		
-		if(txt == "tagall" && seq.toType == 2 && isAdminOrBot(seq.from_)){
+		if(txt == "แทค" && seq.toType == 2 && isAdminOrBot(seq.from_)){
 			await this.tagAlls(seq);
 		}
 		
@@ -1417,7 +1417,7 @@ Link Download: "+idU.id+"\n";
             for (var i = 0; i < listMember.length; i++) {
                 if(listMember[i].mid==param){
 					let namanya = listMember[i].dn;
-					seq.text = 'Goodbye ! @'+namanya;
+					seq.text = 'จะรีบออกไปไหน ผมยังไม่ได้บินเลย @'+namanya;
 					let midnya = listMember[i].mid;
 					let kata = seq.text.split("@").slice(0,1);
 					let kata2 = kata[0].split("");
